@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: James R. Carr
+  description: Collect metadata on s3 buckets and objects
+  company:
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - all
+    - quantal
+    - raring
+    - saucy
+    - trusty
+  categories:
+  - system
+dependencies: []
