@@ -50,6 +50,21 @@ EXAMPLES = """
   register: s3stat
 
 """
+import os
+import urlparse
+from ssl import SSLError
+
+try:
+    import boto
+    import boto.ec2
+    from boto.s3.connection import Location
+    from boto.s3.connection import OrdinaryCallingFormat
+    from boto.s3.connection import S3Connection
+    from boto.s3.acl import CannedACLStrings
+    HAS_BOTO = True
+except ImportError:
+    HAS_BOTO = False
+
 
 def get_bucket(module, s3, bucket):
     try:
